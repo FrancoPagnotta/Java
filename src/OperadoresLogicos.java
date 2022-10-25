@@ -3,8 +3,8 @@ public class OperadoresLogicos {
 
         int i = 3;
         byte j = 3;
-        float k = 5;
-        double l = 10;
+        float k = 127e-7f;
+        double l = 2.1413e3;
         boolean m = false;
 
         boolean b1 = i == j && k > l; // si la primera condicion es true, evalua la seugnda pero si fuese false queda toda la expresion en false
@@ -19,9 +19,14 @@ public class OperadoresLogicos {
         boolean b4 = i == j && k > l || m == false; // evalua primero lo previo al or, si es true evalua lo posterior al or
         System.out.println("b4 = " + b4);
 
-        boolean b5 = i == j && (k > l || m == false); // la expresion es true, porque i == j es true y lo del parentesis es true porque si bien k > f es false, m == false es true y estamos usando el or y al menos una de ambas debe ser true para que sea true.
+        boolean b5 = i == j && (k > l || m == false); // primero resuelve los parentesis, le cambiamos el orden de lectura a derecha a izquierda
         System.out.println("b5 = " + b5);
-
+        
+        boolean b6 = true || true && false; // true porque primero se resuelve el and && porque tiene mas prioridad que el or, entonces true y true es true
+        System.out.println("b6 = " + b6);
+    
+        boolean b7 = ((true || false) && false) || false;
+        System.out.println("b7 = " + b7);
 
 
     }
