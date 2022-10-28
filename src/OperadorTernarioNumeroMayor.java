@@ -17,7 +17,6 @@ public class OperadorTernarioNumeroMayor {
 
         max = (number1 > number2 ) ? number1 : (number2);
         max = (max > number3) ? max : number3;
-
         System.out.println("max = " + max);
                 
                 
