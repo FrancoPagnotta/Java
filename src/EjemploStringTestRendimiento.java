@@ -27,6 +27,9 @@ public class EjemploStringTestRendimiento {
            */
        }
 
+        System.gc();
+       System.exit(0);
+
        long end = System.currentTimeMillis();
 
         System.out.println(end - start);

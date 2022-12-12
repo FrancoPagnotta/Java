@@ -32,7 +32,10 @@ public class EjemploJavaUtilDateParse {
                 System.out.println("User date is equal actual date");
             }
         } catch (ParseException e) {
-            throw new RuntimeException(e);
+            //throw new RuntimeException(e);
+            System.err.println("incorrect date format = " + e.getMessage());
+            //System.exit(1);
+            main(args);
         }
     }
 }
